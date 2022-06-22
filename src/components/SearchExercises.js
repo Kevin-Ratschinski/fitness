@@ -8,6 +8,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
+    // TODO fetch bodyPartList
     /* const fetchExercisesData = async () => {
       const bodyPartsData = await fetchData(
         'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
@@ -18,7 +19,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     };
 
     fetchExercisesData(); */
-    // TODO
+
     setBodyParts([
       'all',
       'back',
@@ -104,6 +105,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           bodyParts
           setBodyPart={setBodyPart}
           bodyPart={bodyPart}
+          isBodyParts
         />
       </Box>
     </Stack>
