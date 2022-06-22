@@ -5,9 +5,6 @@ import ExerciseCard from './ExerciseCard';
 
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 
-// TODO remove
-import data from './exercises_data.json';
-
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
@@ -19,19 +16,13 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     indexOfLastExercise
   );
 
-  // TODO remove
-  useEffect(() => {
-    setExercises(data);
-  }, []);
-
   const paginate = (event, value) => {
     setCurrentPage(value);
 
     window.scrollTo({ top: 1800, behavior: 'smooth' });
   };
 
-  // TODO activate
-  /* useEffect(() => {
+  useEffect(() => {
     const fetchExercisesData = async () => {
       let exercisesData = [];
 
@@ -52,7 +43,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
     fetchExercisesData();
   }, [bodyPart]);
- */
+
   return (
     <Box id="exercises" sx={{ mt: { lg: '110px' } }} mt="50px" p="20px">
       <Typography variant="h3" mb="46px">
